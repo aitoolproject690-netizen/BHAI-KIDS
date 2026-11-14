@@ -44,7 +44,7 @@ function saveCompleted() {
 }
 
 function animal(kind, x, y, scale, delay) {
-  const start = '<g class="animal-float delay-' + delay + '" transform="translate(' + x + ' ' + y + ') scale(' + scale + ')">';
+  const start = '<g transform="translate(' + x + ' ' + y + ') scale(' + scale + ')"><g class="animal-float delay-' + delay + '">';
   const eye = '<ellipse cx="0" cy="0" rx="4.5" ry="6" fill="#26364b"/><circle cx="1.2" cy="-2" r="1.7" fill="#fff"/>';
   let body = "";
   if (kind === "elephant") {
@@ -57,7 +57,7 @@ function animal(kind, x, y, scale, delay) {
     body = '<ellipse cx="0" cy="70" rx="74" ry="57" fill="#d99852"/><path d="M-48 100l-7 34q-2 12 10 12h10q10 0 12-10l8-33M24 101l8 34q3 12 14 9l8-2q10-3 7-14l-12-36" fill="#bd7d45"/><circle cx="0" cy="0" r="76" fill="#bd793f"/><circle cx="0" cy="0" r="59" fill="#e9b35f"/><circle cx="-39" cy="-44" r="20" fill="#bd793f"/><circle cx="39" cy="-44" r="20" fill="#bd793f"/><circle cx="-39" cy="-44" r="10" fill="#efc58a"/><circle cx="39" cy="-44" r="10" fill="#efc58a"/><g transform="translate(-21 -8)">' + eye + '</g><g transform="translate(21 -8)">' + eye + '</g><ellipse cx="0" cy="26" rx="27" ry="21" fill="#f6d9a4"/><path d="M-9 19q9-8 18 0q-9 12-18 0" fill="#65483d"/><path d="M0 30q-2 15-14 14m14-14q2 15 14 14" fill="none" stroke="#80533d" stroke-width="3" stroke-linecap="round"/><circle cx="-45" cy="23" r="8" fill="#e99c8a" opacity=".65"/><circle cx="45" cy="23" r="8" fill="#e99c8a" opacity=".65"/>';
   }
   const mouth = '<ellipse cx="0" cy="0" rx="7" ry="4" fill="#744a46" class="talk-mouth"/>';
-  return start + body + '<ellipse cx="0" cy="151" rx="55" ry="8" fill="#477e62" opacity=".18"/><g transform="translate(0 0)">' + mouth + '</g></g>';
+  return start + body + '<ellipse cx="0" cy="151" rx="55" ry="8" fill="#477e62" opacity=".18"/><g transform="translate(0 0)">' + mouth + '</g></g></g>';
 }
 
 function sceneSvg(scene) {
