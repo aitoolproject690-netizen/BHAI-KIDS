@@ -1,9 +1,11 @@
-const CACHE_NAME = "bhai-kids-shell-v1";
+const CACHE_NAME = "bhai-kids-shell-v2-cartoon";
 const APP_FILES = [
   "./",
   "./index.html",
   "./assets/app.css",
   "./assets/app.js",
+  "./assets/cartoon-v2.css",
+  "./assets/cartoon-v2.js",
   "./manifest.webmanifest",
   "./icon.svg"
 ];
